@@ -121,9 +121,12 @@ function App() {
 
   return (
     <div className={`flex w-full h-screen bg-gray-100 overflow-hidden text-sm relative ${isDragging ? 'select-none' : ''}`}>
-      <button type="button" onClick={() => setShowApiKeys(true)} title="Configurar claves de API" aria-label="Configurar claves de API" className="fixed top-3 right-3 z-[900] flex items-center gap-2 bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50">
-        <KeyRound size={17} /><span className="hidden sm:inline">Claves API</span>
-      </button>
+      <div className="fixed top-3 right-3 z-[900] flex items-center gap-2">
+        <a href="https://github.com/erlpruebas/plano-a-plano-studio-viajes" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50">Guiones y audios</a>
+        <button type="button" onClick={() => setShowApiKeys(true)} title="Configurar claves de API" aria-label="Configurar claves de API" className="flex items-center gap-2 bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50">
+          <KeyRound size={17} /><span className="hidden sm:inline">Claves API</span>
+        </button>
+      </div>
       {showApiKeys && <ApiKeysDialog onClose={() => setShowApiKeys(false)} />}
       {/* Visual drag & drop overlay for .txt/.md files */}
       {isDraggingFile && (
