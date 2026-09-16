@@ -3,8 +3,9 @@ import LeftPanel from './components/LeftPanel';
 import Visualizer from './components/Visualizer';
 import Chat from './components/Chat';
 import ApiKeysDialog from './components/ApiKeysDialog';
+import OnlineLibraryDialog from './components/OnlineLibraryDialog';
 import { useScriptStore } from './store/useScriptStore';
-import { FileText, KeyRound } from 'lucide-react';
+import { BookOpen, FileText, KeyRound } from 'lucide-react';
 
 function App() {
   const [leftWidth, setLeftWidth] = useState(65);
@@ -14,6 +15,7 @@ function App() {
   const [isDraggingFile, setIsDraggingFile] = useState(false);
   const [pendingScriptFile, setPendingScriptFile] = useState<{ name: string; content: string } | null>(null);
   const [showApiKeys, setShowApiKeys] = useState(false);
+  const [showOnlineLibrary, setShowOnlineLibrary] = useState(false);
   const dragCounter = useRef(0);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -122,12 +124,14 @@ function App() {
   return (
     <div className={`flex w-full h-screen bg-gray-100 overflow-hidden text-sm relative ${isDragging ? 'select-none' : ''}`}>
       <div className="fixed top-3 right-3 z-[900] flex items-center gap-2">
+        <button type="button" onClick={() => setShowOnlineLibrary(true)} className="flex items-center gap-2 bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50"><BookOpen size={17} /><span className="hidden sm:inline">Biblioteca</span></button>
         <a href="https://github.com/erlpruebas/plano-a-plano-studio-viajes" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50">Guiones y audios</a>
         <button type="button" onClick={() => setShowApiKeys(true)} title="Configurar claves de API" aria-label="Configurar claves de API" className="flex items-center gap-2 bg-white text-gray-800 border border-gray-300 rounded-lg shadow px-3 py-2 hover:bg-blue-50">
           <KeyRound size={17} /><span className="hidden sm:inline">Claves API</span>
         </button>
       </div>
       {showApiKeys && <ApiKeysDialog onClose={() => setShowApiKeys(false)} />}
+      {showOnlineLibrary && <OnlineLibraryDialog onClose={() => setShowOnlineLibrary(false)} />}
       {/* Visual drag & drop overlay for .txt/.md files */}
       {isDraggingFile && (
         <div className="fixed inset-0 z-50 pointer-events-none bg-blue-600/10 border-4 border-dashed border-blue-500/80 flex items-center justify-center animate-in fade-in duration-150 backdrop-blur-[1px]">
