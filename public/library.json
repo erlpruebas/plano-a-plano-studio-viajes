@@ -45,5 +45,36 @@
     "13 genodovis p2.mp3",
     "seccion viajes completomp3.mp3",
     "un vaso.mp3"
-  ]
+  ],
+  "durations": {
+    "01 eytrmor parte 2.mp3": 115.47,
+    "13 genodovis p1.mp3": 343.32,
+    "05 snomia p2.mp3": 117.71,
+    "04 spufitis p2.mp3": 85.4,
+    "06 petrodermia p1.mp3": 279.38,
+    "03 meilara parte 2.mp3": 128.62,
+    "12 shiritania p2.mp3": 151.75,
+    "02 paliv parte 2.mp3": 161.38,
+    "10 astropodia p1.mp3": 264.37,
+    "07 Zshiummlara p1.mp3": 275.36,
+    "07 Zshiummlarala p2.mp3": 135.96,
+    "13 genodovis p2.mp3": 214.36,
+    "09 zum zum zum p2.mp3": 173.86,
+    "00 euvis@.mp3": 316.02,
+    "12 shiritania p1.mp3": 239.39,
+    "seccion viajes completomp3.mp3": 5879.01,
+    "un vaso.mp3": 69.9,
+    "08 tierra 327x p1.mp3": 299.81,
+    "06 petrodermia p2.mp3": 140.45,
+    "10 astropodia p2.mp3": 165.92,
+    "11 enolia p2.mp3": 201.16,
+    "11 enolia p1.mp3": 284.83,
+    "01 eytrmor parte 1.mp3": 277.37,
+    "04 spufitis p1.mp3": 274.37,
+    "05 snomia p1.mp3": 266.85,
+    "09 zum zum zum p1.mp3": 289.35,
+    "08 tierra 327x p2.mp3": 147.57,
+    "02 paliv parte 1.mp3": 284.36,
+    "03 meilara parte 1.mp3": 249.39
+  }
 }

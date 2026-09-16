@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BookOpen, X } from 'lucide-react';
 import { useScriptStore } from '../store/useScriptStore';
 
-type Library = { guiones: string[]; audios: string[] };
+type Library = { guiones: string[]; audios: string[]; durations: Record<string, number> };
 const base = import.meta.env.BASE_URL;
 const fileUrl = (folder: 'guiones' | 'audios', filename: string) => `${base}${folder}/${encodeURIComponent(filename)}`;
 
@@ -52,7 +52,7 @@ export default function OnlineLibraryDialog({ onClose }: { onClose: () => void }
 
   const addAudio = () => {
     if (!audio) return;
-    addAudioTracks([{ id: `online-audio-${Date.now()}`, name: audio, url: fileUrl('audios', audio), duration: 0 }]);
+    addAudioTracks([{ id: `online-audio-${Date.now()}`, name: audio, url: fileUrl('audios', audio), duration: library?.durations[audio] || 0 }]);
     onClose();
   };
 
