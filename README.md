@@ -19,6 +19,8 @@ npm run dev
 
 Abre la dirección local que muestre Vite. Para usar funciones de IA, pulsa **Claves API** (icono de llave) y escribe tus claves de OpenRouter, Groq o Google Gemini. Se guardan en `localStorage` del navegador actual, en texto legible para ese perfil, y no forman parte del repositorio ni del guion exportado. No uses esta función en un navegador compartido. Puedes borrar cada clave dejando su campo vacío y guardando.
 
+La versión publicada en GitHub Pages se abre en `https://erlpruebas.github.io/plano-a-plano-studio-viajes/` cuando la publicación de Pages está habilitada. Las claves se configuran por separado en cada navegador. Los MP3 y guiones del repositorio no se incorporan a la web pública; puedes descargar los archivos desde el repositorio privado y cargarlos en la aplicación.
+
 Las llamadas a proveedores de IA salen directamente del navegador. El proveedor correspondiente recibirá el contenido enviado para esa función. Las funciones de edición y carga local siguen disponibles sin claves.
 
 Para obtener los MP3 al clonar:
